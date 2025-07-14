@@ -2,12 +2,14 @@ body,
 html {
   height: 100%;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .main_container{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 3fr;
 }
 
@@ -21,13 +23,19 @@ html {
     gap: 32px;
 }
 
-.side_part1{
+.side_part1, h1{
     display: flex;
     flex-direction: column;
     align-items: start;
     padding-left: 20%;
-    margin-top: -32px;
     overflow: hidden;
+}
+
+.side_part1 p, .side_part2 p{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .side_part2{
@@ -36,7 +44,6 @@ html {
     align-items: start;
     padding-left: 20%;
     overflow: hidden;
-    margin-bottom: -32px;
 }
 
 a{
@@ -56,9 +63,9 @@ a{
     grid-area: 2/2/3/3;
     background-color: lightslategray;
     display: grid;
-    grid-template-columns: 5fr 2fr ;
-    grid-template-rows: 10% 80% ;
-    gap: 16px;
+    grid-template-columns: 65%;
+    grid-template-rows: 10% 80%;
+    padding: 20px;
 }
 
 .project{
@@ -77,12 +84,70 @@ a{
     border-radius: 10%;
     align-items: start;
     padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Header{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 25px;
+}
+
+.user_part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_part2{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-left: 20px;
+}
+.user_part2 div p{
+    margin-bottom: -20px;
+}
+
+.user_button{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.user_button button{
+    color: white;
+    border-radius: 15px;
+    background-color: lightblue;
+    font-size: large;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+.detail_icon{
+    margin-left: 75%;
+    display: flex;
+    gap: 16px;
+    resize: both;
+    
 }
 
 .project_part2{
-    grid-area: 2/2/3/3;
+    grid-area: 1/3/3/4;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    padding-right: 50px;
 }
 .announcement{
     grid-area: 1/1/2/1;
@@ -90,15 +155,19 @@ a{
 }
 .announcement h2 {
     grid-area: 1/1/2/3;
-    background-color: aqua;
     
 }
 .announcement_in{
     grid-area: 2/1/3/3;
+    padding-left: 30px;
+    background-color: white;
     
-    background-color: blueviolet;
 }
 
+
+.announcement_in .first2{
+    border-bottom: 2px solid black;
+}
 
 
 .trending{
@@ -110,23 +179,22 @@ a{
     display: grid;
     grid-template-columns: 3fr 7fr;
     column-count: 2;
+    background-color: white;
 }
 
 .icon{
     grid-area: 1/1/2/2;
     padding-left: 25%;
-    background-color: yellow;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 .accounts{
     grid-area: 1/2/2/3;
-    padding-left: 25%;
-    background-color: green;
+    padding-left: 1rem;
 }
 
-.icon img{
+.icon img, div img{
     border-radius: 50%;
 }
 
@@ -138,4 +206,17 @@ p img{
     color: white;
     width: 35px;
     height: 35px;
+}
+
+.detail div img{
+    width: 20px;
+    height: 20px;
+}
+
+.searchingbar, .searchingbar2{
+    display: flex;
+    gap: 15px;
+    padding-right: 50px;
+    justify-items: center;
+    justify-content: center;
 }
